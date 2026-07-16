@@ -1,0 +1,4 @@
+.DS_Store
+# unused oversized originals and Finder duplicates (site uses the .jpg copies)
+images/*.PNG
+images/* 2.*

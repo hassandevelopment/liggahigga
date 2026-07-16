@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>The RULEBOOK</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <main class="stage">
+    <div class="book" id="book" aria-label="The RULEBOOK - an interactive book">
+
+      <!-- ══════════ FRONT COVER ══════════ -->
+      <section class="page page--cover" aria-label="Front cover">
+        <div class="cover-inner">
+          <div class="cover-frame">
+            <p class="cover-eyebrow">By the authority vested in love</p>
+            <div class="cover-rule-line" aria-hidden="true"></div>
+            <h1 class="cover-title">The<br>RULEBOOK</h1>
+            <div class="cover-rule-line" aria-hidden="true"></div>
+            <p class="cover-sub">Official Edition &middot; Binding &amp; Eternal</p>
+            <div class="cover-seal" aria-hidden="true">
+              <span class="cover-seal-text">L&nbsp;&hearts;&nbsp;H</span>
+            </div>
+            <p class="cover-foot">Ratified in perpetuity &middot; No amendments permitted</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════ PAGE 1 - THE POEM ══════════ -->
+      <section class="page page--poem" aria-label="Page 1 - The poem">
+        <div class="page-inner poem-inner">
+          <p class="poem-ornament" aria-hidden="true">&#10087;</p>
+
+          <div class="poem-arabic" lang="ar" dir="rtl">
+            <p>وش الغريب ان قلت عمري فداك ؟</p>
+            <p>من ابسط حقوقك عليا ادلعك</p>
+            <p>ازعل العالم عشان اكسب رضاك</p>
+            <p>مهما اسوي لك انا مقصر معك</p>
+          </div>
+
+          <div class="poem-divider" aria-hidden="true"><span>&hearts;</span></div>
+
+          <div class="poem-english" lang="en">
+            <p>What&rsquo;s so strange about saying my life is yours?</p>
+            <p>Spoiling you is the least of what you deserve from me</p>
+            <p>I&rsquo;d turn the whole world against me just to make you happy</p>
+            <p>And no matter what I do, I&rsquo;m never doing enough for you</p>
+          </div>
+
+          <div class="poem-audio no-flip">
+            <button class="play-btn" id="play-btn" type="button" aria-label="Play the poem recording">
+              <svg class="icon-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg>
+              <svg class="icon-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z"/></svg>
+            </button>
+            <div class="audio-meta">
+              <span class="audio-label">In my voice, for you</span>
+              <div class="audio-track" aria-hidden="true"><div class="audio-fill" id="audio-fill"></div></div>
+            </div>
+            <audio id="poem-audio" preload="metadata">
+              <source src="audio/poem-1.m4a" type="audio/mp4">
+              <source src="audio/poem-1.mp3" type="audio/mpeg">
+            </audio>
+          </div>
+
+          <figure class="photo-frame" id="photo-frame">
+            <img src="images/FrontCover.JPEG" alt="Us" id="poem-photo">
+            <figcaption class="photo-placeholder" aria-hidden="true">
+              <span class="photo-heart">&hearts;</span>
+              <span>a photo of us, coming soon</span>
+            </figcaption>
+          </figure>
+
+          <footer class="page-num" aria-hidden="true">- 1 -</footer>
+        </div>
+      </section>
+
+      <!-- ══════════ PAGE 2 - SECTION I ══════════ -->
+      <section class="page page--rules" aria-label="Page 2 - Section I">
+        <div class="page-inner">
+          <header class="section-head">
+            <p class="section-kicker">Section I</p>
+            <h2 class="section-title">General Conduct</h2>
+          </header>
+          <ol class="rules">
+            <li><span class="num">1</span><p>Hassan must greet Lina within 0.3 seconds of her entering any room. Failure to do so will be noted.</p></li>
+            <li><span class="num">2</span><p>Hassan must always agree that Lina is right, even when she changes her mind mid-sentence.</p></li>
+            <li><span class="num">3</span><p>Hassan is not allowed to say &ldquo;calm down.&rdquo; Ever. Under any circumstances. This rule has no expiration date.</p></li>
+            <li><span class="num">4</span><p>Hassan must laugh at all of Lina&rsquo;s jokes, including the ones she tells for the fourth time.</p></li>
+          </ol>
+          <div class="rule-photo tilt-l" aria-hidden="true">
+            <img src="images/IMG_5161.jpg" alt="" loading="lazy">
+          </div>
+          <footer class="page-num" aria-hidden="true">- 2 -</footer>
+        </div>
+      </section>
+
+      <!-- ══════════ PAGE 3 - SECTION I (CONT.) ══════════ -->
+      <section class="page page--rules" aria-label="Page 3 - Section I continued">
+        <div class="page-inner">
+          <header class="section-head">
+            <p class="section-kicker">Section I &middot; continued</p>
+            <h2 class="section-title">General Conduct</h2>
+          </header>
+          <ol class="rules">
+            <li><span class="num">5</span><p>Hassan must never say &ldquo;I told you so,&rdquo; even if he literally told her so.</p></li>
+            <li><span class="num">6</span><p>Hassan must pretend to be surprised every time Lina shows him something she already showed him yesterday.</p></li>
+            <li><span class="num">7</span><p>Hassan is not allowed to use logic during an argument. Feelings only.</p></li>
+            <li><span class="num">8</span><p>If Lina says &ldquo;I&rsquo;m fine,&rdquo; Hassan must assume she is absolutely not fine and act accordingly.</p></li>
+            <li><span class="num">9</span><p>Hassan must always let Lina win at board games. If she loses, the game was rigged.</p></li>
+          </ol>
+          <div class="rule-photo tilt-r" aria-hidden="true">
+            <img src="images/IMG_5175.JPG" alt="" loading="lazy">
+          </div>
+          <footer class="page-num" aria-hidden="true">- 3 -</footer>
+        </div>
+      </section>
+
+      <!-- ══════════ PAGE 4 - SECTION II ══════════ -->
+      <section class="page page--rules" aria-label="Page 4 - Section II">
+        <div class="page-inner">
+          <header class="section-head">
+            <p class="section-kicker">Section II</p>
+            <h2 class="section-title">Communication &amp; Phone Etiquette</h2>
+          </header>
+          <ol class="rules">
+            <li><span class="num">10</span><p>Hassan must respond to texts within 2 minutes. &ldquo;I was in the shower&rdquo; is not an acceptable excuse more than once a week.</p></li>
+            <li><span class="num">11</span><p>Hassan must always send the first good morning text. No exceptions. Not even on his birthday.</p></li>
+            <li><span class="num">12</span><p>If Hassan is typing and stops, he must explain what he was going to say and why he deleted it.</p></li>
+            <li><span class="num">13</span><p>Hassan must react to every single Instagram story Lina posts. A simple view does not count.</p></li>
+            <li><span class="num">14</span><p>Hassan must never follow any account that posts thirst traps. His explore page will be audited monthly.</p></li>
+          </ol>
+          <div class="rule-photo tilt-l" aria-hidden="true">
+            <img src="images/IMG_5156.jpg" alt="" loading="lazy">
+          </div>
+          <footer class="page-num" aria-hidden="true">- 4 -</footer>
+        </div>
+      </section>
+
+      <!-- ══════════ PAGE 5 - SECTION II (CONT.) ══════════ -->
+      <section class="page page--rules" aria-label="Page 5 - Section II continued">
+        <div class="page-inner">
+          <header class="section-head">
+            <p class="section-kicker">Section II &middot; continued</p>
+            <h2 class="section-title">Communication &amp; Phone Etiquette</h2>
+          </header>
+          <ol class="rules">
+            <li><span class="num">15</span><p>Hassan&rsquo;s phone must remain on full volume at all times in case Lina calls. Silent mode is a myth.</p></li>
+            <li><span class="num">16</span><p>Hassan must always FaceTime with the front camera. Ceiling shots are an act of war.</p></li>
+            <li><span class="num">17</span><p>If Lina sends a voice note, Hassan must listen to it in full and respond with a voice note of equal or greater length.</p></li>
+            <li><span class="num">18</span><p>Hassan must double-text if Lina does not respond. Tripling is encouraged. Giving up is not allowed.</p></li>
+            <li><span class="num">19</span><p>Hassan is not allowed to text &ldquo;k.&rdquo;</p></li>
+          </ol>
+          <div class="rule-photo tilt-r" aria-hidden="true">
+            <img src="images/IMG_5169.jpg" alt="" loading="lazy">
+          </div>
+          <footer class="page-num" aria-hidden="true">- 5 -</footer>
+        </div>
+      </section>
+
+      <!-- ══════════ PAGE 6 - SECTION III ══════════ -->
+      <section class="page page--rules" aria-label="Page 6 - Section III">
+        <div class="page-inner">
+          <header class="section-head">
+            <p class="section-kicker">Section III</p>
+            <h2 class="section-title">Food &amp; Dining</h2>
+          </header>
+          <ol class="rules">
+            <li><span class="num">20</span><p>When Lina says &ldquo;I&rsquo;m not hungry,&rdquo; Hassan must still order extra food because she will eat his.</p></li>
+            <li><span class="num">21</span><p>Hassan must never finish the last bite of anything without offering it to Lina first. She will say no. He must offer again. She will take it.</p></li>
+            <li><span class="num">22</span><p>Hassan must always know what Lina wants to eat, even when she doesn&rsquo;t know what she wants to eat.</p></li>
+            <li><span class="num">23</span><p>If Hassan suggests a restaurant and Lina says &ldquo;I don&rsquo;t care, you pick,&rdquo; he must pick exactly what she was already thinking.</p></li>
+          </ol>
+          <div class="rule-photo tilt-l" aria-hidden="true">
+            <img src="images/IMG_5164.jpg" alt="" loading="lazy">
+          </div>
+          <footer class="page-num" aria-hidden="true">- 6 -</footer>
+        </div>
+      </section>
+
+      <!-- ══════════ PAGE 7 - SECTION III (CONT.) ══════════ -->
+      <section class="page page--rules" aria-label="Page 7 - Section III continued">
+        <div class="page-inner">
+          <header class="section-head">
+            <p class="section-kicker">Section III &middot; continued</p>
+            <h2 class="section-title">Food &amp; Dining</h2>
+          </header>
+          <ol class="rules">
+            <li><span class="num">24</span><p>Hassan is not allowed to say &ldquo;we have food at home.&rdquo;</p></li>
+            <li><span class="num">25</span><p>Hassan must share his fries without being asked. Hesitation will be remembered.</p></li>
+            <li><span class="num">26</span><p>Hassan must learn to cook Lina&rsquo;s favorite meal. Cereal does not count.</p></li>
+            <li><span class="num">27</span><p>If Lina says she only wants &ldquo;a bite,&rdquo; Hassan should expect to lose half his plate.</p></li>
+            <li><span class="num">28</span><p>Hassan must always have snacks ready in the car. The glove box is now a pantry.</p></li>
+            <li><span class="num">29</span><p>Hassan must never eat the last piece of chocolate. That chocolate was always Lina&rsquo;s.</p></li>
+          </ol>
+          <div class="rule-photo tilt-r" aria-hidden="true">
+            <img src="images/imgimgimgimg.jpg" alt="" loading="lazy">
+          </div>
+          <footer class="page-num" aria-hidden="true">- 7 -</footer>
+        </div>
+      </section>
+
+      <!-- ══════════ PAGE 8 - SECTION IV ══════════ -->
+      <section class="page page--rules" aria-label="Page 8 - Section IV">
+        <div class="page-inner">
+          <header class="section-head">
+            <p class="section-kicker">Section IV</p>
+            <h2 class="section-title">Going Out &amp; Curfew</h2>
+          </header>
+          <ol class="rules">
+            <li><span class="num">30</span><p>Hassan must come home no later than 9 PM. Extensions require written approval submitted 48 hours in advance.</p></li>
+            <li><span class="num">31</span><p>Hassan must send a photo of his surroundings when asked &ldquo;where are you?&rdquo; Google Maps location sharing is also required.</p></li>
+            <li><span class="num">32</span><p>If Hassan is out with friends, he must text Lina every 30 minutes to remind her she is more important than all of them.</p></li>
+            <li><span class="num">33</span><p>Hassan is not allowed to have fun without Lina. If he accidentally has fun, he must feel slightly guilty.</p></li>
+          </ol>
+          <div class="rule-photo tilt-l" aria-hidden="true">
+            <img src="images/IMG_5158.jpg" alt="" loading="lazy">
+          </div>
+          <footer class="page-num" aria-hidden="true">- 8 -</footer>
+        </div>
+      </section>
+
+      <!-- ══════════ PAGE 9 - SECTION IV (CONT.) ══════════ -->
+      <section class="page page--rules" aria-label="Page 9 - Section IV continued">
+        <div class="page-inner">
+          <header class="section-head">
+            <p class="section-kicker">Section IV &middot; continued</p>
+            <h2 class="section-title">Going Out &amp; Curfew</h2>
+          </header>
+          <ol class="rules">
+            <li><span class="num">34</span><p>Hassan must always offer to cancel his plans if Lina is bored. She will say &ldquo;no go have fun.&rdquo; He must offer again.</p></li>
+            <li><span class="num">35</span><p>Hassan must walk on the side closest to the road. If there is no road, he must invent a danger to protect her from.</p></li>
+            <li><span class="num">36</span><p>Hassan must hold the door open. Every door. Even automatic ones. Stand there anyway.</p></li>
+            <li><span class="num">37</span><p>Hassan is not allowed to look at his phone during a date. His phone does not exist when Lina is present.</p></li>
+          </ol>
+          <div class="rule-photo tilt-r" aria-hidden="true">
+            <img src="images/IMG_5173.jpg" alt="" loading="lazy">
+          </div>
+          <footer class="page-num" aria-hidden="true">- 9 -</footer>
+        </div>
+      </section>
+
+      <!-- ══════════ PAGE 10 - SECTION V ══════════ -->
+      <section class="page page--rules" aria-label="Page 10 - Section V">
+        <div class="page-inner">
+          <header class="section-head">
+            <p class="section-kicker">Section V</p>
+            <h2 class="section-title">Compliments &amp; Affection</h2>
+          </header>
+          <ol class="rules">
+            <li><span class="num">38</span><p>Hassan must compliment Lina at least 5 times per day. Repeats are allowed but not encouraged.</p></li>
+            <li><span class="num">39</span><p>If Lina asks &ldquo;do I look okay?&rdquo; the answer is always &ldquo;you look amazing&rdquo; and it must be delivered without hesitation.</p></li>
+            <li><span class="num">40</span><p>Hassan must notice when Lina gets a haircut, even if she trimmed 0.5 centimeters.</p></li>
+            <li><span class="num">41</span><p>Hassan must never say another woman is pretty. Celebrities and cartoons do not count.</p></li>
+            <li><span class="num">42</span><p>If Lina is cold, Hassan must give her his jacket without being asked. If he is also cold, that is his problem.</p></li>
+          </ol>
+          <div class="rule-photo tilt-l" aria-hidden="true">
+            <img src="images/IMG_5162.jpg" alt="" loading="lazy">
+          </div>
+          <footer class="page-num" aria-hidden="true">- 10 -</footer>
+        </div>
+      </section>
+
+      <!-- ══════════ PAGE 11 - SECTION V (CONT.) ══════════ -->
+      <section class="page page--rules" aria-label="Page 11 - Section V continued">
+        <div class="page-inner">
+          <header class="section-head">
+            <p class="section-kicker">Section V &middot; continued</p>
+            <h2 class="section-title">Compliments &amp; Affection</h2>
+          </header>
+          <ol class="rules">
+            <li><span class="num">43</span><p>Hassan must randomly send paragraphs for no reason. &ldquo;I just felt like it&rdquo; is the correct explanation.</p></li>
+            <li><span class="num">44</span><p>Hassan must slow his walking speed to match Lina&rsquo;s. His legs are longer and that is not her fault.</p></li>
+            <li><span class="num">45</span><p>Hassan must always hold Lina&rsquo;s hand in public. If his hands are full, he must figure it out.</p></li>
+            <li><span class="num">46</span><p>Hassan must tell Lina she&rsquo;s the prettiest girl in the room. Even if they are home alone.</p></li>
+          </ol>
+          <div class="rule-photo tilt-r" aria-hidden="true">
+            <img src="images/IMG_5167.jpg" alt="" loading="lazy">
+          </div>
+          <footer class="page-num" aria-hidden="true">- 11 -</footer>
+        </div>
+      </section>
+
+      <!-- ══════════ PAGE 12 - SECTION VI ══════════ -->
+      <section class="page page--rules" aria-label="Page 12 - Section VI">
+        <div class="page-inner">
+          <header class="section-head">
+            <p class="section-kicker">Section VI</p>
+            <h2 class="section-title">Sleeping &amp; Living</h2>
+          </header>
+          <ol class="rules">
+            <li><span class="num">47</span><p>Hassan must always let Lina have the good pillow. He can use the flat one. Character builds.</p></li>
+            <li><span class="num">48</span><p>Hassan must not steal the blanket. If Lina rolls herself into a burrito, he must sleep cold and be grateful she is comfortable.</p></li>
+            <li><span class="num">49</span><p>Hassan must always be the one to check on the &ldquo;weird noise&rdquo; at 3 AM. He signed up for this.</p></li>
+            <li><span class="num">50</span><p>The AC is Lina&rsquo;s jurisdiction. Hassan may bring this up once. He will lose.</p></li>
+          </ol>
+          <div class="rule-photo tilt-l" aria-hidden="true">
+            <img src="images/IMG_5157.jpg" alt="" loading="lazy">
+          </div>
+          <footer class="page-num" aria-hidden="true">- 12 -</footer>
+        </div>
+      </section>
+
+      <!-- ══════════ PAGE 13 - SECTION VI (CONT.) ══════════ -->
+      <section class="page page--rules" aria-label="Page 13 - Section VI continued">
+        <div class="page-inner">
+          <header class="section-head">
+            <p class="section-kicker">Section VI &middot; continued</p>
+            <h2 class="section-title">Sleeping &amp; Living</h2>
+          </header>
+          <ol class="rules">
+            <li><span class="num">51</span><p>Hassan must pretend he is not tired when Lina wants to keep talking at midnight. His yawns will be treated as personal insults.</p></li>
+            <li><span class="num">52</span><p>Hassan must always be the big spoon. Schedule rotations require a formal request.</p></li>
+          </ol>
+          <div class="rule-photo tilt-r" aria-hidden="true">
+            <img src="images/IMG_5174.jpg" alt="" loading="lazy">
+          </div>
+          <footer class="page-num" aria-hidden="true">- 13 -</footer>
+        </div>
+      </section>
+
+      <!-- ══════════ PAGE 14 - SECTION VII ══════════ -->
+      <section class="page page--rules" aria-label="Page 14 - Section VII">
+        <div class="page-inner">
+          <header class="section-head">
+            <p class="section-kicker">Section VII</p>
+            <h2 class="section-title">Shopping &amp; Gifts</h2>
+          </header>
+          <ol class="rules">
+            <li><span class="num">53</span><p>When Lina says &ldquo;I&rsquo;m just looking,&rdquo; Hassan must prepare to carry bags.</p></li>
+            <li><span class="num">54</span><p>Hassan must remember every item Lina has ever pointed at in a store and said &ldquo;that&rsquo;s cute.&rdquo; These are gift hints.</p></li>
+            <li><span class="num">55</span><p>Hassan is not allowed to ask &ldquo;how much was that?&rdquo; The price is irrelevant. She deserved it.</p></li>
+            <li><span class="num">56</span><p>Hassan must hold Lina&rsquo;s purse in public without complaint. Bonus points for confidence.</p></li>
+          </ol>
+          <div class="rule-photo tilt-l" aria-hidden="true">
+            <img src="images/IMG_5160.jpg" alt="" loading="lazy">
+          </div>
+          <footer class="page-num" aria-hidden="true">- 14 -</footer>
+        </div>
+      </section>
+
+      <!-- ══════════ PAGE 15 - SECTION VII (CONT.) ══════════ -->
+      <section class="page page--rules" aria-label="Page 15 - Section VII continued">
+        <div class="page-inner">
+          <header class="section-head">
+            <p class="section-kicker">Section VII &middot; continued</p>
+            <h2 class="section-title">Shopping &amp; Gifts</h2>
+          </header>
+          <ol class="rules">
+            <li><span class="num">57</span><p>Hassan must always say &ldquo;get both&rdquo; when Lina cannot decide between two things.</p></li>
+            <li><span class="num">58</span><p>Flowers must be given randomly, not just on occasions. &ldquo;Just because&rdquo; flowers are worth triple points.</p></li>
+            <li><span class="num">59</span><p>Hassan must remember every anniversary. The day they met, first text, first call, first date, first argument (yes, that counts too).</p></li>
+          </ol>
+          <div class="rule-photo tilt-r" aria-hidden="true">
+            <img src="images/IMG_5171.jpg" alt="" loading="lazy">
+          </div>
+          <footer class="page-num" aria-hidden="true">- 15 -</footer>
+        </div>
+      </section>
+
+      <!-- ══════════ PAGE 16 - SECTION VIII ══════════ -->
+      <section class="page page--rules" aria-label="Page 16 - Section VIII">
+        <div class="page-inner">
+          <header class="section-head">
+            <p class="section-kicker">Section VIII</p>
+            <h2 class="section-title">Arguments &amp; Apologies</h2>
+          </header>
+          <ol class="rules">
+            <li><span class="num">60</span><p>Hassan must apologize first. Even if it was Lina&rsquo;s fault. Especially if it was Lina&rsquo;s fault.</p></li>
+            <li><span class="num">61</span><p>Hassan is not allowed to bring up old arguments that he won. Those never happened.</p></li>
+            <li><span class="num">62</span><p>If Lina gives Hassan the silent treatment, he must keep trying. Silence is a test, not a break.</p></li>
+            <li><span class="num">63</span><p>Hassan must never go to sleep angry. He must fix it before midnight or face tomorrow&rsquo;s extended edition.</p></li>
+          </ol>
+          <div class="rule-photo tilt-l" aria-hidden="true">
+            <img src="images/IMG_5165.jpg" alt="" loading="lazy">
+          </div>
+          <footer class="page-num" aria-hidden="true">- 16 -</footer>
+        </div>
+      </section>
+
+      <!-- ══════════ PAGE 17 - SECTION VIII (CONT.) ══════════ -->
+      <section class="page page--rules" aria-label="Page 17 - Section VIII continued">
+        <div class="page-inner">
+          <header class="section-head">
+            <p class="section-kicker">Section VIII &middot; continued</p>
+            <h2 class="section-title">Arguments &amp; Apologies</h2>
+          </header>
+          <ol class="rules">
+            <li><span class="num">64</span><p>Hassan must always take Lina&rsquo;s side in front of other people. Constructive criticism is a private matter.</p></li>
+            <li><span class="num">65</span><p>&ldquo;I&rsquo;m sorry you feel that way&rdquo; does not count as an apology. Hassan must try harder.</p></li>
+            <li><span class="num">66</span><p>If Lina cries, Hassan must also look emotional. Dry eyes during her tears are suspicious.</p></li>
+          </ol>
+          <div class="rule-photo tilt-r" aria-hidden="true">
+            <img src="images/IMG_5168.jpg" alt="" loading="lazy">
+          </div>
+          <footer class="page-num" aria-hidden="true">- 17 -</footer>
+        </div>
+      </section>
+
+      <!-- ══════════ PAGE 18 - SECTION IX ══════════ -->
+      <section class="page page--rules" aria-label="Page 18 - Section IX">
+        <div class="page-inner">
+          <header class="section-head">
+            <p class="section-kicker">Section IX</p>
+            <h2 class="section-title">Friends &amp; Family</h2>
+          </header>
+          <ol class="rules">
+            <li><span class="num">67</span><p>Hassan must always hype Lina up in front of his friends. &ldquo;Yeah she&rsquo;s cool&rdquo; is not hype.</p></li>
+            <li><span class="num">68</span><p>Hassan&rsquo;s mom is lovely, but Lina&rsquo;s opinion outranks hers on all food-related decisions.</p></li>
+            <li><span class="num">69</span><p>Hassan must never compare Lina to anyone. She is incomparable. This is a fact, not a compliment.</p></li>
+            <li><span class="num">70</span><p>Hassan must always say &ldquo;we&rdquo; when making plans. &ldquo;I&rdquo; is a word for single people.</p></li>
+          </ol>
+          <div class="rule-photo tilt-l" aria-hidden="true">
+            <img src="images/IMG_5159.jpg" alt="" loading="lazy">
+          </div>
+          <footer class="page-num" aria-hidden="true">- 18 -</footer>
+        </div>
+      </section>
+
+      <!-- ══════════ PAGE 19 - SECTION X ══════════ -->
+      <section class="page page--rules" aria-label="Page 19 - Section X">
+        <div class="page-inner">
+          <header class="section-head">
+            <p class="section-kicker">Section X</p>
+            <h2 class="section-title">Miscellaneous</h2>
+          </header>
+          <ol class="rules">
+            <li><span class="num">71</span><p>Hassan must always carry Lina&rsquo;s bags without being asked. If she insists she can carry them, she is testing him.</p></li>
+            <li><span class="num">72</span><p>Hassan is not allowed to say &ldquo;you&rsquo;re overreacting.&rdquo; Those words do not exist in this household.</p></li>
+            <li><span class="num">73</span><p>Hassan must take at least 47 photos of Lina when she asks for &ldquo;just one picture.&rdquo;</p></li>
+            <li><span class="num">74</span><p>Hassan must keep his car clean at all times. The passenger seat is Lina&rsquo;s throne.</p></li>
+            <li><span class="num">75</span><p>Hassan must play Lina&rsquo;s music in the car without complaint. His playlist can wait.</p></li>
+          </ol>
+          <div class="rule-photo tilt-r" aria-hidden="true">
+            <img src="images/IMG_5170.jpg" alt="" loading="lazy">
+          </div>
+          <footer class="page-num" aria-hidden="true">- 19 -</footer>
+        </div>
+      </section>
+
+      <!-- ══════════ PAGE 20 - SECTION X (CONT.) ══════════ -->
+      <section class="page page--rules" aria-label="Page 20 - Section X continued">
+        <div class="page-inner">
+          <header class="section-head">
+            <p class="section-kicker">Section X &middot; continued</p>
+            <h2 class="section-title">Miscellaneous</h2>
+          </header>
+          <ol class="rules">
+            <li><span class="num">76</span><p>Hassan must always charge Lina&rsquo;s phone when it dies. His battery percentage is secondary.</p></li>
+            <li><span class="num">77</span><p>Hassan must watch whatever show Lina picks. He will pretend to enjoy it. Eventually, he actually will.</p></li>
+            <li><span class="num">78</span><p>Hassan must not spoil any show or movie. If he has seen it, he must act surprised at every twist.</p></li>
+            <li><span class="num">79</span><p>Hassan must always save Lina a seat. On the bus, at the movies, at family dinners, in Jannah.</p></li>
+          </ol>
+          <p class="rules-closing">Here conclude the sections of this contract.<br><em>One rule remains.</em></p>
+          <div class="rule-photo tilt-l" aria-hidden="true">
+            <img src="images/IMG_5163.jpg" alt="" loading="lazy">
+          </div>
+          <footer class="page-num" aria-hidden="true">- 20 -</footer>
+        </div>
+      </section>
+
+      <!-- ══════════ PAGE 21 - THE FINAL RULE ══════════ -->
+      <section class="page page--final" aria-label="Page 21 - The final rule">
+        <div class="page-inner final-inner">
+          <div class="hearts" aria-hidden="true">
+            <span class="heart" style="--x:8%;  --d:7s;  --dl:0s;    --s:14px;">&hearts;</span>
+            <span class="heart" style="--x:22%; --d:9s;  --dl:1.6s;  --s:10px;">&hearts;</span>
+            <span class="heart" style="--x:36%; --d:8s;  --dl:3.4s;  --s:18px;">&hearts;</span>
+            <span class="heart" style="--x:50%; --d:10s; --dl:0.8s;  --s:12px;">&hearts;</span>
+            <span class="heart" style="--x:63%; --d:7.5s;--dl:2.4s;  --s:16px;">&hearts;</span>
+            <span class="heart" style="--x:75%; --d:9.5s;--dl:4.2s;  --s:11px;">&hearts;</span>
+            <span class="heart" style="--x:88%; --d:8.5s;--dl:1.2s;  --s:15px;">&hearts;</span>
+            <span class="heart" style="--x:15%; --d:11s; --dl:5s;    --s:9px;">&hearts;</span>
+            <span class="heart" style="--x:80%; --d:10.5s;--dl:6s;   --s:13px;">&hearts;</span>
+          </div>
+
+          <p class="final-eyebrow">The Final Rule &middot; Article 80</p>
+          <h2 class="final-rule">Lina must<br>marry Hassan<span class="final-period">.</span></h2>
+          <div class="final-heart" aria-hidden="true">&hearts;</div>
+          <p class="final-terms">Effective immediately &middot; Non-negotiable &middot; No appeals</p>
+
+          <div class="final-sign">
+            <div class="sig">
+              <span class="sig-line signed">Hassan</span>
+              <span class="sig-name">signed, obviously</span>
+            </div>
+            <button class="sig sig--lina no-flip" id="sign-btn" type="button" aria-label="Tap to sign the contract">
+              <img class="sig-stamp" id="sig-stamp" src="images/signaturelaw.jpg" alt="Lina&rsquo;s signature" hidden>
+              <span class="sign-cue" aria-hidden="true">&#9759; click here to sign &#9759;</span>
+              <span class="sig-line"></span>
+              <span class="sig-name" id="sign-label">Lina, sign here</span>
+            </button>
+          </div>
+
+          <footer class="page-num" aria-hidden="true">- 21 -</footer>
+        </div>
+      </section>
+
+      <!-- ══════════ BACK COVER ══════════ -->
+      <section class="page page--back" aria-label="Back cover">
+        <div class="cover-inner">
+          <div class="back-frame">
+            <span class="back-heart" aria-hidden="true">&hearts;</span>
+            <p class="back-title">End of Contract</p>
+            <p class="back-sub">The undersigned agree that these rules,<br>like the author&rsquo;s heart, are non-refundable.</p>
+            <button class="restart-btn no-flip" id="restart-btn" type="button">&hearts;&ensp;Read it again&ensp;&hearts;</button>
+            <p class="back-copy">&copy; Hassan &amp; Lina &middot; All rights reserved &middot; Forever</p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <p class="hint" id="hint">swipe or tap to turn the page</p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
