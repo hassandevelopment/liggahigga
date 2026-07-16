@@ -231,10 +231,10 @@
     }
   }
 
-  /* celebration sound: audio/yay.mp3 if present, else a synthesized ta-da */
+  /* celebration sound: the recorded YAY, else a synthesized ta-da */
 
   function playYay() {
-    const yay = new Audio("audio/yay.mp3");
+    const yay = new Audio("audio/yay.m4a");
     yay.play().catch(synthFanfare);
   }
 
