@@ -494,6 +494,54 @@ body {
 }
 .rules-closing em { color: var(--wax); }
 
+/* -- Table of contents ------------------------------------ */
+
+.toc {
+  display: flex;
+  flex-direction: column;
+  margin-top: clamp(2px, 1vh, 10px);
+}
+.toc-row {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  min-height: clamp(38px, 5.4vh, 46px);
+  padding: 0 2px;
+  background: none;
+  border: none;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  color: var(--ink);
+}
+.toc-numeral {
+  display: inline-block;
+  width: 2.2em;
+  font-weight: 700;
+  color: var(--gold-dim);
+}
+.toc-name {
+  font-family: var(--serif);
+  font-size: clamp(13.5px, 3.7vw, 15.5px);
+  white-space: nowrap;
+}
+.toc-dots {
+  flex: 1;
+  min-width: 12px;
+  border-bottom: 1.5px dotted rgba(122, 112, 96, .55);
+  transform: translateY(-3px);
+}
+.toc-pg {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--gold-dim);
+}
+.toc-row:hover .toc-name, .toc-row:active .toc-name { color: var(--wax); }
+.toc-row--final .toc-name,
+.toc-row--final .toc-pg,
+.toc-row--final .toc-numeral { color: var(--rose); }
+
 /* -- The final rule -------------------------------------- */
 
 .final-inner {
@@ -605,11 +653,16 @@ button.sig {
   cursor: pointer;
 }
 
+/* both signature blocks share identical geometry so the lines sit level */
+.final-sign .sig {
+  padding: 6px 10px;
+  border: 1.5px dashed transparent;
+  border-radius: 12px;
+}
+
 /* unmissable "sign here" invitation, gone once signed */
 button.sig--lina:not(.is-signed) {
-  border: 1.5px dashed rgba(176, 74, 90, .55);
-  border-radius: 12px;
-  padding: 6px 10px 8px;
+  border-color: rgba(176, 74, 90, .55);
 }
 button.sig--lina:not(.is-signed)::after {
   content: "";
@@ -626,6 +679,10 @@ button.sig--lina:not(.is-signed)::after {
   100% { transform: scale(1.12); opacity: 0; }
 }
 .sign-cue {
+  position: absolute;
+  bottom: calc(100% + 6px);
+  left: 50%;
+  white-space: nowrap;
   font-size: 11px;
   font-weight: 700;
   letter-spacing: .12em;
@@ -634,8 +691,8 @@ button.sig--lina:not(.is-signed)::after {
   animation: cue-bob 1.3s ease-in-out infinite;
 }
 @keyframes cue-bob {
-  0%, 100% { transform: translateY(0); }
-  50%      { transform: translateY(-4px); }
+  0%, 100% { transform: translate(-50%, 0); }
+  50%      { transform: translate(-50%, -4px); }
 }
 .sig--lina.is-signed .sign-cue { display: none; }
 
@@ -757,6 +814,7 @@ button.sig.is-signed { cursor: default; }
 
 @media (max-height: 700px) {
   .rule-photo { display: none; }
+  .toc-row { min-height: 34px; }
   .rules p { font-size: 14px; line-height: 1.55; }
   .rules { gap: 8px; }
   .section-head { padding-bottom: 10px; margin-bottom: 10px; }

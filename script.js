@@ -64,6 +64,29 @@
     else if (e.key === "ArrowLeft") prev();
   });
 
+  /* -- Table of contents: jump straight to a section -------- */
+
+  function goTo(index) {
+    if (index < 0 || index >= N || index === current) return;
+    book.classList.add("no-anim");
+    pages.forEach((p, i) => {
+      clearTimeout(p._settle);
+      p.classList.remove("turning", "peek");
+      p.classList.toggle("flipped", i < index);
+      p.style.zIndex = String(i < index ? i + 1 : N - i);
+    });
+    current = index;
+    void book.offsetWidth;
+    book.classList.remove("no-anim");
+    onNavigate();
+  }
+
+  document.querySelectorAll(".toc-row").forEach((row) => {
+    row.addEventListener("click", () => {
+      goTo(pages.indexOf(document.getElementById(row.dataset.goto)));
+    });
+  });
+
   /* -- Mobile: swipe (50px threshold, horizontal only) --- */
 
   const SWIPE_MIN = 50;
